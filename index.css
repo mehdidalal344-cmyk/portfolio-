@@ -1,0 +1,465 @@
+/* -------------------------
+   GENERAL SETTINGS
+-------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --background: #f8f8f5;
+    --surface: #ffffff;
+    --text: #242522;
+    --muted: #777970;
+    --border: #e6e6df;
+    --accent: #777b68;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+section {
+    scroll-margin-top: 90px;
+}
+
+
+/* -------------------------
+   NAVIGATION
+-------------------------- */
+
+header {
+    position: sticky;
+    top: 0;
+    background: rgba(248, 248, 245, 0.95);
+    border-bottom: 1px solid var(--border);
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 22px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 13px;
+    color: var(--muted);
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--text);
+}
+
+
+/* -------------------------
+   HOME SECTION
+-------------------------- */
+
+.home {
+    max-width: 1200px;
+    min-height: 650px;
+    margin: auto;
+    padding: 130px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home-content {
+    max-width: 750px;
+}
+
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.home h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(48px, 7vw, 78px);
+    line-height: 1.15;
+    font-weight: 600;
+}
+
+.home h1 span {
+    color: var(--accent);
+}
+
+.home h2 {
+    font-size: 19px;
+    font-weight: 500;
+    margin-top: 25px;
+}
+
+.intro {
+    max-width: 600px;
+    color: var(--muted);
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 35px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--text);
+    color: white;
+    padding: 13px 25px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--accent);
+}
+
+.text-link {
+    font-size: 13px;
+    border-bottom: 1px solid var(--text);
+    padding-bottom: 4px;
+}
+
+.home-side {
+    color: var(--muted);
+    font-size: 10px;
+    letter-spacing: 3px;
+    line-height: 3;
+}
+
+.side-line {
+    width: 40px;
+    height: 1px;
+    background: var(--accent);
+    margin-bottom: 20px;
+}
+
+
+/* -------------------------
+   GENERAL SECTIONS
+-------------------------- */
+
+.section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 100px 30px;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 50px;
+    border-top: 1px solid var(--border);
+}
+
+.section-label {
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.section-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 35px;
+}
+
+.section-content h2 span {
+    color: var(--accent);
+}
+
+
+/* -------------------------
+   ABOUT
+-------------------------- */
+
+.about .section-content p {
+    max-width: 750px;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 2;
+}
+
+
+/* -------------------------
+   EDUCATION
+-------------------------- */
+
+.education-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.education-card h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.education-card p,
+.education-note {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.status {
+    font-size: 11px;
+    color: var(--accent);
+    white-space: nowrap;
+}
+
+.education-note {
+    margin-top: 20px;
+}
+
+
+/* -------------------------
+   SKILLS
+-------------------------- */
+
+.section-description {
+    color: var(--muted);
+    margin-bottom: 35px;
+    font-size: 14px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.skill-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 25px;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-4px);
+    border-color: #b9bbae;
+}
+
+.skill-card span {
+    color: var(--accent);
+    font-size: 11px;
+}
+
+.skill-card h3 {
+    font-size: 16px;
+    margin: 12px 0;
+}
+
+.skill-card p {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+
+/* -------------------------
+   PROJECTS
+-------------------------- */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.project-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 30px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+}
+
+.project-number {
+    color: var(--accent);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.project-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    margin: 20px 0 12px;
+}
+
+.project-card p {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+
+.project-card span {
+    font-size: 11px;
+    color: var(--accent);
+}
+
+
+/* -------------------------
+   CONTACT
+-------------------------- */
+
+.contact .section-content > p {
+    color: var(--muted);
+    max-width: 550px;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.contact-details {
+    margin-top: 35px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+
+/* -------------------------
+   FOOTER
+-------------------------- */
+
+footer {
+    border-top: 1px solid var(--border);
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+footer a {
+    color: var(--text);
+}
+
+
+/* -------------------------
+   RESPONSIVE DESIGN
+-------------------------- */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .home {
+        min-height: 600px;
+        padding: 100px 25px;
+    }
+
+    .home-side {
+        display: none;
+    }
+
+    .home h1 {
+        font-size: 48px;
+    }
+
+    .home h2 {
+        font-size: 17px;
+    }
+
+    .section {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 75px 25px;
+    }
+
+    .section-content h2 {
+        font-size: 34px;
+    }
+
+    .skills-grid,
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .education-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .home h1 {
+        font-size: 40px;
+    }
+
+    .buttons {
+        flex-wrap: wrap;
+    }
+
+}
